@@ -289,7 +289,7 @@ resource "aws_eks_node_group" "devops1" {
     min_size     = 3
   }
 
-  instance_types = ["t3.medium"]
+  instance_types = var.eks_instance_types
 
   remote_access {
     ec2_ssh_key               = var.ssh_key_name
