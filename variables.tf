@@ -28,3 +28,8 @@ variable "ebs_csi_driver_version" {
   default     = "v1.50.1-eksbuild.1"
 }
 
+variable "eks_instance_types" {
+  description = "List of EC2 instance types for the EKS node group"
+  type        = list(string)
+  default     = ["t3.medium"]    # ["c7i-flex.large"]  # You can change the default if you want ["t3.medium"]
+}
